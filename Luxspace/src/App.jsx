@@ -1,9 +1,17 @@
 import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Homepage from "./pages/Homepage";
 
 function App() {
   return (
     <>
-      <h1 className="text-red-600">Hello World, Iam Using React dan Vite in Website</h1>
+      <BrowserRouter>
+        <div className="App">
+          <Routes>
+            <Route path="/" element={<Homepage />} />
+          </Routes>
+        </div>
+      </BrowserRouter>
     </>
   );
 }
